@@ -16,7 +16,7 @@ class HousespiderPipeline(object):
             updateTime = item['updateTime']
             price = item['price']
             lookCount = item['lookCount']
-
-            Sql.insert_netdata(title, address, other, updateTime, price, lookCount)
+            area = item['area']
+            Sql.insert_netdata(title, address, other, updateTime, price, lookCount,area)
 
             print '插入成功'

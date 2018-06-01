@@ -1,18 +1,19 @@
 # -*-coding:utf-8-*-
 
-from pyecharts import Bar, Pie
+from pyecharts import Bar, Pie, Line
+from HouseSpider.mysqlpipelines.sql import Sql
 
-# bar = Bar("我的第一个图表", "这里是副标题")
-# bar.add("服装", ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"], [5, 20, 36, 10, 75, 90])
-# # bar.print_echarts_options() # 该行只为了打印配置项，方便调试时使用
-# bar.render()    # 生成本地 HTML 文件
+attr = ["工业园区", "吴中", "吴江", "高新区", "姑苏", "相城"]
 
+min_price = []
+max_price = []
+line = Line("房租分析折线图")
 
-attr = ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-v1 = [11, 12, 13, 10, 10, 10]
-v2 = [19, 22, 33, 44, 45, 55]
+for i in range(6):
+    min_price.append(Sql.select_min_price(attr[i]))  # 最小房租
+    max_price.append(Sql.select_max_price(attr[i]))  # 最大房租
 
-pie = Pie('饼图', title_pos='center', width=900)
-pie.add("商品A", attr, v1, center=[25, 50], is_random=True, radius=[30, 75], rosetype='radius')
+line.add("最低房租", attr, min_price, mark_point=["average"])
+line.add("商最房租", attr, max_price, is_smooth=True, mark_line=["max", "average"])
 
-pie.render()
+line.render()

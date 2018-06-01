@@ -16,4 +16,5 @@ class HouseSpiderItem(scrapy.Item):
     price = scrapy.Field()
     updateTime = scrapy.Field()
     lookCount = scrapy.Field()
+    area = scrapy.Field()
     pass

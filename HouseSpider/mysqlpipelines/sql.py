@@ -16,15 +16,16 @@ cur = cnx.cursor(buffered=True)
 
 class Sql:
     @classmethod
-    def insert_netdata(cls, title, address, other, updateTime, price, lookCount):
-        sql = 'INSERT INTO house_renting (title, address, other, updateTime,price,lookCount) VALUES (%(title)s, %(address)s, %(other)s,%(updateTime)s,%(price)s,%(lookCount)s)'
+    def insert_netdata(cls, title, address, other, updateTime, price, lookCount, area):
+        sql = 'INSERT INTO house_renting (title, address, other, updateTime,price,lookCount,area) VALUES (%(title)s, %(address)s, %(other)s,%(updateTime)s,%(price)s,%(lookCount)s,%(area)s)'
         value = {
             'title': title,
             'address': address,
             'other': other,
             'updateTime': updateTime,
             'price': price,
-            'lookCount': lookCount
+            'lookCount': lookCount,
+            'area': area
         }
 
         # 如果已经存在同一条数据，则删除旧的数据
@@ -93,6 +94,52 @@ class Sql:
             return True
         else:
             return False
+
+    @classmethod
+    def select_price_with_area(cls, area):
+        sql = 'select price from house_renting WHERE area=%(area)s'
+        params = {
+            'area': area
+        }
+        cur.execute(sql, params)
+
+        return cur.fetchall()
+
+    # 获取最小价格
+    @classmethod
+    def select_min_price(cls, area):
+        sql = 'select min(price) from house_renting WHERE area=%(area)s'
+        params = {
+            'area': area
+        }
+        cur.execute(sql, params)
+
+        result = cur.fetchone()
+        if result is None:
+            return 0
+        else:
+            if result[0] is None:
+                return 0
+            else:
+                return result[0]
+
+    # 获取最大价格
+    @classmethod
+    def select_max_price(cls, area):
+        sql = 'select max(price) from house_renting WHERE area=%(area)s'
+        params = {
+            'area': area
+        }
+        cur.execute(sql, params)
+
+        result = cur.fetchone()
+        if result is None:
+            return 0
+        else:
+            if result[0] is None:
+                return 0
+            else:
+                return result[0]
 
     # 清空表数据
     @classmethod
