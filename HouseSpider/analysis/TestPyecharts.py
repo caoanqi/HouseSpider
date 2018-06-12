@@ -37,19 +37,28 @@ from pyecharts import Bar, Pie
 
 from pyecharts import Bar
 
-attr = ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-v1 = [5, 20, 36, 10, 75, 90]
-v2 = [10, 25, 8, 60, 20, 80]
-
-bar = Bar("柱状图数据堆叠")
-
-# bar.add('商家1', attr, v1, is_stack=True)
-# bar.add('商家2', attr, v2, is_stack=True)
-
+# attr = ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+# v1 = [5, 20, 36, 10, 75, 90]
+# v2 = [10, 25, 8, 60, 20, 80]
+#
+# bar = Bar("柱状图数据堆叠")
+#
+# # bar.add('商家1', attr, v1, is_stack=True)
+# # bar.add('商家2', attr, v2, is_stack=True)
+#
+# # bar.add('商家1', attr, v1, mark_point=["average"])
+# # bar.add('商家2', attr, v2, mark_line=["min", "max"])
+#
 # bar.add('商家1', attr, v1, mark_point=["average"])
-# bar.add('商家2', attr, v2, mark_line=["min", "max"])
+# bar.add('商家2', attr, v2, is_convert=True)
+#
+# bar.render()
 
-bar.add('商家1', attr, v1, mark_point=["average"])
-bar.add('商家2', attr, v2, is_convert=True)
 
-bar.render()
+# from pyecharts import Pie
+#
+# attr = ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+# v1 = [11, 12, 13, 10, 10, 10]
+# pie = Pie("饼图示例")
+# pie.add("", attr, v1, is_label_show=True)
+# pie.render()

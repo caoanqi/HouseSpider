@@ -9,38 +9,23 @@
 </script>
 </head>
 <body>
-    <div id="627646929ba6424286115ceff4f012fa" style="width:800px;height:400px;"></div>
+    <div id="d9a530d3ef2945199b4f58c3ae55e5dd" style="width:800px;height:400px;"></div>
     <script type="text/javascript">
 
-var myChart_627646929ba6424286115ceff4f012fa = echarts.init(document.getElementById('627646929ba6424286115ceff4f012fa'), 'light', {renderer: 'canvas'});
+var myChart_d9a530d3ef2945199b4f58c3ae55e5dd = echarts.init(document.getElementById('d9a530d3ef2945199b4f58c3ae55e5dd'), 'light', {renderer: 'canvas'});
 
-var option_627646929ba6424286115ceff4f012fa = {
-    "yAxis": [
+var option_d9a530d3ef2945199b4f58c3ae55e5dd = {
+    "title": [
         {
-            "nameLocation": "middle", 
-            "axisTick": {
-                "alignWithLabel": false
+            "textStyle": {
+                "fontSize": 18
             }, 
-            "inverse": false, 
-            "show": true, 
-            "axisLabel": {
-                "textStyle": {
-                    "fontSize": 12
-                }, 
-                "interval": "auto", 
-                "margin": 8, 
-                "rotate": 0, 
-                "formatter": "{value} "
+            "top": "auto", 
+            "left": "auto", 
+            "subtextStyle": {
+                "fontSize": 12
             }, 
-            "splitLine": {
-                "show": true
-            }, 
-            "boundaryGap": true, 
-            "nameTextStyle": {
-                "fontSize": 14
-            }, 
-            "nameGap": 25, 
-            "type": "value"
+            "text": "\u997c\u56fe\u793a\u4f8b"
         }
     ], 
     "color": [
@@ -72,141 +57,59 @@ var option_627646929ba6424286115ceff4f012fa = {
     ], 
     "series": [
         {
-            "seriesId": 6705386, 
-            "markLine": {
-                "data": []
-            }, 
-            "name": "\u6700\u4f4e\u623f\u79df", 
-            "type": "line", 
-            "symbol": "emptyCircle", 
-            "smooth": false, 
+            "seriesId": 4133000, 
+            "center": [
+                "50%", 
+                "50%"
+            ], 
+            "type": "pie", 
             "label": {
                 "emphasis": {
                     "textStyle": {
                         "fontSize": 12
                     }, 
+                    "formatter": "{b}: {d}%", 
                     "show": true
                 }, 
                 "normal": {
-                    "position": "top", 
-                    "show": false, 
+                    "show": true, 
+                    "position": "outside", 
+                    "formatter": "{b}: {d}%", 
                     "textStyle": {
                         "fontSize": 12
                     }
                 }
             }, 
-            "step": false, 
-            "symbolSize": 4, 
-            "markPoint": {
-                "data": [
-                    {
-                        "symbol": "pin", 
-                        "symbolSize": 50, 
-                        "type": "average", 
-                        "name": "mean-Value", 
-                        "label": {
-                            "normal": {
-                                "textStyle": {
-                                    "color": "#fff"
-                                }
-                            }
-                        }
-                    }
-                ]
-            }, 
-            "areaStyle": {
-                "opacity": 0
-            }, 
-            "lineStyle": {
-                "normal": {
-                    "opacity": 1, 
-                    "width": 1, 
-                    "type": "solid", 
-                    "curveness": 0
-                }
-            }, 
-            "data": [
-                1000, 
-                1500, 
-                0, 
-                1800, 
-                1400, 
-                1500
+            "radius": [
+                "0%", 
+                "75%"
             ], 
-            "showSymbol": true
-        }, 
-        {
-            "seriesId": 6705386, 
-            "markLine": {
-                "data": [
-                    {
-                        "type": "max", 
-                        "name": "Maximum"
-                    }, 
-                    {
-                        "type": "average", 
-                        "name": "mean-Value"
-                    }
-                ], 
-                "symbolSize": 10
-            }, 
-            "name": "\u5546\u6700\u623f\u79df", 
-            "type": "line", 
-            "symbol": "emptyCircle", 
-            "smooth": true, 
-            "label": {
-                "emphasis": {
-                    "textStyle": {
-                        "fontSize": 12
-                    }, 
-                    "show": true
+            "data": [
+                {
+                    "name": "\u5de5\u4e1a\u56ed\u533a", 
+                    "value": 1000
                 }, 
-                "normal": {
-                    "position": "top", 
-                    "show": false, 
-                    "textStyle": {
-                        "fontSize": 12
-                    }
+                {
+                    "name": "\u5434\u4e2d", 
+                    "value": 1500
+                }, 
+                {
+                    "name": "\u5434\u6c5f", 
+                    "value": 0
+                }, 
+                {
+                    "name": "\u9ad8\u65b0\u533a", 
+                    "value": 1800
+                }, 
+                {
+                    "name": "\u59d1\u82cf", 
+                    "value": 1400
+                }, 
+                {
+                    "name": "\u76f8\u57ce", 
+                    "value": 1500
                 }
-            }, 
-            "step": false, 
-            "symbolSize": 4, 
-            "markPoint": {
-                "data": []
-            }, 
-            "areaStyle": {
-                "opacity": 0
-            }, 
-            "lineStyle": {
-                "normal": {
-                    "opacity": 1, 
-                    "width": 1, 
-                    "type": "solid", 
-                    "curveness": 0
-                }
-            }, 
-            "data": [
-                300000, 
-                25000, 
-                0, 
-                15000, 
-                50000, 
-                8000
-            ], 
-            "showSymbol": true
-        }
-    ], 
-    "title": [
-        {
-            "textStyle": {
-                "fontSize": 18
-            }, 
-            "top": "auto", 
-            "left": "auto", 
-            "subtextStyle": {
-                "fontSize": 12
-            }, 
-            "text": "\u623f\u79df\u5206\u6790\u6298\u7ebf\u56fe"
+            ]
         }
     ], 
     "tooltip": {
@@ -222,42 +125,7 @@ var option_627646929ba6424286115ceff4f012fa = {
         "backgroundColor": "rgba(50,50,50,0.7)", 
         "triggerOn": "mousemove|click"
     }, 
-    "series_id": 6705386, 
-    "xAxis": [
-        {
-            "nameLocation": "middle", 
-            "axisTick": {
-                "alignWithLabel": false
-            }, 
-            "inverse": false, 
-            "show": true, 
-            "type": "category", 
-            "axisLabel": {
-                "textStyle": {
-                    "fontSize": 12
-                }, 
-                "interval": "auto", 
-                "margin": 8, 
-                "rotate": 0
-            }, 
-            "splitLine": {
-                "show": false
-            }, 
-            "boundaryGap": true, 
-            "nameTextStyle": {
-                "fontSize": 14
-            }, 
-            "nameGap": 25, 
-            "data": [
-                "\u5de5\u4e1a\u56ed\u533a", 
-                "\u5434\u4e2d", 
-                "\u5434\u6c5f", 
-                "\u9ad8\u65b0\u533a", 
-                "\u59d1\u82cf", 
-                "\u76f8\u57ce"
-            ]
-        }
-    ], 
+    "series_id": 4133000, 
     "toolbox": {
         "orient": "vertical", 
         "top": "center", 
@@ -285,15 +153,19 @@ var option_627646929ba6424286115ceff4f012fa = {
             "top": "top", 
             "selectedMode": "multiple", 
             "data": [
-                "\u6700\u4f4e\u623f\u79df", 
-                "\u5546\u6700\u623f\u79df"
+                "\u5de5\u4e1a\u56ed\u533a", 
+                "\u5434\u4e2d", 
+                "\u5434\u6c5f", 
+                "\u9ad8\u65b0\u533a", 
+                "\u59d1\u82cf", 
+                "\u76f8\u57ce"
             ], 
             "orient": "horizontal", 
             "left": "center"
         }
     ]
 };
-myChart_627646929ba6424286115ceff4f012fa.setOption(option_627646929ba6424286115ceff4f012fa);
+myChart_d9a530d3ef2945199b4f58c3ae55e5dd.setOption(option_d9a530d3ef2945199b4f58c3ae55e5dd);
 
 </script>
 </body>
